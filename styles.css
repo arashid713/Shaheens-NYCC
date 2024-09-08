@@ -1,93 +1,98 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2b3e2b;
-    color: #f5f5f5;
+    background-color: #f2f2f2; /* Slightly off-white background for a soft look */
+    color: #333; /* Darker text for readability */
 }
 
 header {
-    background-color: #233123;
-    color: #f5d742;
-    padding: 1rem;
+    background-color: #004d00; /* Dark green for a bold header */
+    color: #f5f5f5; /* Light text for contrast */
+    padding: 2rem 0; /* Increased padding for a more spacious look */
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow */
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.8rem; /* Larger font size for prominence */
+    letter-spacing: 0.1em;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem; /* Increased gap for better spacing */
 }
 
 nav ul li a {
-    color: #f5d742;
+    color: #f5f5f5; /* Light color for navigation links */
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.2rem; /* Slightly larger font size */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e0e0e0; /* Light grey on hover */
 }
 
 .hero {
-    background-color: #4a5a4a;
-    padding: 3rem;
+    background: linear-gradient(120deg, #e0f2f1 30%, #ffffff 100%); /* Softer gradient background */
+    padding: 4rem;
     text-align: center;
-    color: #ffffff;
+    color: #004d00; /* Dark green text */
+    border-bottom: 4px solid #004d00; /* Thicker border for emphasis */
 }
 
-.gallery {
+.hero h2 {
+    font-size: 2.5rem; /* Slightly larger heading size */
+    margin-bottom: 2rem; /* Increased margin for spacing */
+}
+
+.hero p {
+    font-size: 1.3rem; /* Larger font size for better readability */
+    color: #333;
+}
+
+.hero-content {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem; /* Gap between columns */
+    justify-content: center; /* Center the columns */
 }
 
-.gallery-item {
-    position: relative;
-    width: 300px;
-    height: 345px;
-    overflow: hidden;
-    border-radius: 10px;
+.text-column {
+    flex: 1;
+    max-width: 600px; /* Restrict the maximum width of the text column */
+    text-align: left; /* Align text to the left */
 }
 
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.5s ease;
+.image-column {
+    flex: 1;
+    max-width: 500px; /* Restrict the maximum width of the image column */
 }
 
-.gallery-item:hover img {
-    transform: scale(1.1); /* Image zoom effect on hover */
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7); /* Black background with transparency */
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.gallery-item:hover .overlay {
-    opacity: 1; /* Text appears on hover */
+.image-column img {
+    width: 100%; /* Ensure the image scales with its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 }
 
 footer {
-    background-color: #233123;
-    color: #f5d742;
-    padding: 1rem;
+    background-color: #004d00; /* Matches the header */
+    color: #f5f5f5; /* Light text for consistency */
+    padding: 2rem; /* Increased padding for balance */
     text-align: center;
+    border-top: 4px solid #f5f5f5; /* Thicker border for emphasis */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1rem; /* Slightly larger font size */
 }
